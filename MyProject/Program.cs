@@ -29,7 +29,15 @@ namespace MyProject
                     result = num1 * num2;
                     break;
                 case "/":
-                    result = num1 / num2;
+                    if (num2 != 0)
+                    {
+                        result = num1 / num2;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Ошибка: деление на ноль!");
+                        return;
+                    }
                     break;
                 default:
                     Console.WriteLine("Неверная операция");
